@@ -5,6 +5,11 @@ import db_models
 import json
 from google.appengine.ext import ndb
 
+
+#authenication/authorization currently commented out. 
+#the bones are there to build off of
+"""
+
 #to register for login procedure
 class Register(webapp2.RequestHandler):
     def post(self):
@@ -75,6 +80,8 @@ class Login(webapp2.RequestHandler):
             self.response.status = 400
             self.response.status_message = "Username does not exist, please register first."
         return
+"""
+
 
 class Student(webapp2.RequestHandler):
     def post(self):
