@@ -11,13 +11,6 @@ from time import mktime
 #to add course AND to view course(s)
 class Course(webapp2.RequestHandler):
 	def post(self):
-		"""Creates a Course entity
-
-		POST Body Variables
-		name - Required. Coursename
-		days - Required. Only letters allowed: MTWRF (Monday, Tuesday, Wednesday, ThuRsday, Friday)
-		time - Required. 
-		"""
 		#create a new course to be added to database
 		new_course = db_models.Course()
 		name = self.request.get('name', default_value=None)
